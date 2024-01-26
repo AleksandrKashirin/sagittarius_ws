@@ -1,17 +1,4 @@
-
-# Check System Requirements
-check_sys(){
-	ubuntu_version=$(lsb_release -r --short)
-        if [[ "${ubuntu_version}" == "16.04" ]]; then
-                ROS_Ver="kinetic"
-        elif [[ "${ubuntu_version}" == "18.04" ]]; then
-                ROS_Ver="melodic"
-        elif [[ "${ubuntu_version}" == "20.04" ]]; then
-                ROS_Ver="noetic"
-        else
-                echo -e "${Error} SPARK does not support the current system ${OSDescription} !" && exit 1
-        fi
-}
+ROS_Ver="noetic"
 sudo apt -y install udev
 BASEPATH=$(cd `dirname $0`; pwd)
 echo "sudo cp $BASEPATH/sdk_sagittarius_arm/rules/sagittarius-usb-serial.rules /etc/udev/rules.d/"
