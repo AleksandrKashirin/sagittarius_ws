@@ -11,4 +11,3 @@ sudo apt -y install ros-${ROS_Ver}-ddynamic-reconfigure
 echo "sudo cp $BASEPATH/sdk_sagittarius_arm/rules/usb_cam.rules /etc/udev/rules.d/"
 sudo cp $BASEPATH/sdk_sagittarius_arm/rules/usb_cam.rules /etc/udev/rules.d/
 sudo udevadm trigger
-check_sys
